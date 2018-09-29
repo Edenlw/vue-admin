@@ -5,6 +5,8 @@ Vue.use(Router)
 
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
 const manage = r => require.ensure([], () => r(require('@/page/manage')), 'manage');
+const home = r => require.ensure([], () => r(require('@/page/home')),'home');
+const userList = r => require.ensure([], () => r(require('@/page/userList'),'userList'));
 const routes = [
 	{
 		path: '/',
@@ -12,6 +14,15 @@ const routes = [
     },{
         path: '/manage',
         component : manage,
+        name : '',
+        children : [{
+            path : '',
+            component : home,
+            meta : []
+        },{
+            path : '/userList',
+            component : userList
+        }]
     }]
 
 export default new Router({

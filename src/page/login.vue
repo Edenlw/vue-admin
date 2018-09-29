@@ -69,9 +69,9 @@
         mounted() {
             this.showLogin = true;
         },
-        methods(){
-            loginLand : function(){
-                this.$router.push({path: '/manage')
+        methods : {
+            loginLand() {
+                this.$router.push('manage')
             }
         }
     }
