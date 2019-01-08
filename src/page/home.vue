@@ -4,6 +4,7 @@
         <el-container style="width:100%;height:100%;">
             <el-row justify="center">
               <h3>数据统计</h3>
+              <h1>中途得</h1>
             </el-row>
             <el-row type="flex" class="row-bg" justify="center" style="width:100%;">
                 <el-col :span="8"><div class="grid-content bg-purple">12</div></el-col>
