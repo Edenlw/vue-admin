@@ -3,14 +3,15 @@
         <el-row style="height:100%;">
             <el-col :span="4" style="background:#324057;min-height:100%;overflow:hidden;">
                 <el-menu
-                    default-active="2"
+                    router 
+                    default-active="defaultActive"
                     class="el-menu-vertical-demo"
                     @open="handleOpen"
                     @close="handleClose"
                     background-color="#324057"
                     text-color="#fff"
                     active-text-color="#ffd04b">
-                    <el-menu-item index="1">
+                    <el-menu-item index="manage">
                         <i class="el-icon-menu"></i>
                         <span slot="title">首页</span>
                     </el-menu-item>
@@ -19,11 +20,11 @@
                             <i class="el-icon-document"></i>
                             <span>数据管理</span>
                         </template>
-                        <el-menu-item index="2-1">用户列表</el-menu-item>
-                        <el-menu-item index="2-2">商家列表</el-menu-item>
-                        <el-menu-item index="2-3">食品列表</el-menu-item>
-                        <el-menu-item index="2-4">订单列表</el-menu-item>
-                        <el-menu-item index="2-5">管理员列表</el-menu-item>
+                        <el-menu-item index="userList">用户列表</el-menu-item>
+                        <el-menu-item index="sellerList">商家列表</el-menu-item>
+                        <el-menu-item index="foodList">食品列表</el-menu-item>
+                        <el-menu-item index="orderList">订单列表</el-menu-item>
+                        <el-menu-item index="adminList">管理员列表</el-menu-item>
                     </el-submenu>
                     <el-submenu index="3">
                         <template slot="title">
@@ -97,14 +98,17 @@
 </script>
 <style>
     .el-header {
-    background-color: #B3C0D1;
-    color: #333;
-    line-height: 60px;
+        background-color: #B3C0D1;
+        color: #333;
+        line-height: 60px;
     } 
     .el-aside {
         color: #333;
     }   
     .el-menu{
         border-right-width: 0;
+    }
+    ::-webkit-scrollbar {
+            width: 0px;
     }
 </style>
